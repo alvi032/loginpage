@@ -13,6 +13,7 @@ h2 {
     font-size: 40px;
     /*display: block;*/
 
+
 }
 body{
     overflow-x: hidden;
@@ -24,37 +25,32 @@ main{
     background-size: cover;
 }
 .container{
-    padding-top:15vh;
+
 }
 main .row{
-    /*border: 1px solid black;*/
-    /*border-radius: 5px;*/
     width: 65vw;
     height: 60vh;
     display: flex;
-    /*display: flex;*/
     text-align: center;
     align-items: center;
-    /*vertical-align: center;*/
-
-
-
-
 }
 .col1{
     background-color: white;
     height: 100%;
-    /*max-width: 30%;*/
-    /*border-radius: 15px;*/
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    
 }
 .col2{
-    /*background-size: cover;*/
     background: linear-gradient(to right, #7633e5, #178ee0);
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     height: 100%;
     width:  100%;
+}
+.col2 h2, p{
+    color: white;
+
+
 }
 
