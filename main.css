@@ -23,6 +23,7 @@ main{
 }
 main .row{
     box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
     width: 65vw;
     height: 60vh;
     display: flex;
