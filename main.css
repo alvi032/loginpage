@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 html{
-    font-size:  10px;
+    font-size:  16px;
     font-family: Arial, sans-serif;
+    font-weight: lighter;
+}
+h2 {
+    font-weight: lighter   ;
+    font-size: 40px;
 }
 body{
     overflow-x: hidden;
@@ -24,10 +29,11 @@ main .row{
     /*border-radius: 5px;*/
     width: 65vw;
     height: 60vh;
-    display: flex;
+    display: table-cell;
+    /*display: flex;*/
     text-align: center;
     align-items: center;
-    vertical-align: center;
+    /*vertical-align: center;*/
 
 
 
@@ -36,6 +42,7 @@ main .row{
 .col1{
     background-color: white;
     height: 100%;
+    /*max-width: 30%;*/
     /*border-radius: 15px;*/
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -47,4 +54,8 @@ main .row{
     border-top-right-radius: 15px;
     height: 100%;
     width:  100%;
+}
+.col1,.col2{
+    display: table-cell;
+    vertical-align: middle;
 }
