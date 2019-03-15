@@ -11,6 +11,8 @@ html{
 h2 {
     font-weight: lighter   ;
     font-size: 40px;
+    /*display: block;*/
+
 }
 body{
     overflow-x: hidden;
@@ -29,7 +31,7 @@ main .row{
     /*border-radius: 5px;*/
     width: 65vw;
     height: 60vh;
-    display: table-cell;
+    display: flex;
     /*display: flex;*/
     text-align: center;
     align-items: center;
@@ -55,7 +57,4 @@ main .row{
     height: 100%;
     width:  100%;
 }
-.col1,.col2{
-    display: table-cell;
-    vertical-align: middle;
-}
+
