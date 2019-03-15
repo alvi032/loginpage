@@ -11,9 +11,6 @@ html{
 h2 {
     font-weight: lighter   ;
     font-size: 40px;
-    /*display: block;*/
-
-
 }
 body{
     overflow-x: hidden;
@@ -24,10 +21,8 @@ main{
     height: 100vh;
     background-size: cover;
 }
-.container{
-
-}
 main .row{
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.4);
     width: 65vw;
     height: 60vh;
     display: flex;
@@ -39,7 +34,8 @@ main .row{
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    
+    display: flex;
+    justify-content: center;
 }
 .col2{
     background: linear-gradient(to right, #7633e5, #178ee0);
@@ -50,7 +46,76 @@ main .row{
 }
 .col2 h2, p{
     color: white;
-
-
+}
+.col2 h2{
+    padding-bottom: 30px;
+}
+.row>div{
+    flex-direction: column;
+    justify-content: center;
+}
+.username, .password{
+    font-size: 14px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+input{
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    max-width: 150px;
 }
 
+.username::before{
+    position: absolute;
+    content:"\2709";
+    font-size: 14px;
+}
+.password::before{
+    position: absolute;
+    content:"\01F512";
+    font-size: 14px;
+}
+.login{
+    border-radius:15px;
+    border: 1px;
+    font-size: 12px;
+    height: 25px;
+    width:80px;
+    color:white;
+    background: linear-gradient(to right, #2667cc,#6e38d5);
+}
+p{
+    font-size:14px;
+}
+.loginbut{
+    display: flex;
+    justify-content: center;
+}
+.morebutton{
+    display: flex;
+    justify-content: center;
+}
+.morebutt{
+    border-radius: 15px;
+    border: 2px solid #6e39d3;
+    background-color: transparent;
+    width: 90px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
