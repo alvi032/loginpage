@@ -12,6 +12,9 @@ h2 {
     font-weight: lighter   ;
     font-size: 40px;
 }
+.loginh2{
+    padding-bottom: 30px;
+}
 body{
     overflow-x: hidden;
 }
@@ -119,4 +122,31 @@ a{
 }
 a:hover{
     text-decoration: none;
+}
+@media(max-width: 576px){
+    .col1{
+
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+        height: 50%;
+    }
+    .loginh2{
+        padding:0;
+        font-size: medium;
+    }
+    .col2{
+        height: 50%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+
+    }
+    .col2 h2{
+        font-size: medium;
+    }
+    .col2 p{
+        font-size: x-small;
+    }
+
+
+
 }
