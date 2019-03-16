@@ -6,24 +6,118 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/button.css">
+
+
+    <!--*********************** Bootstrap ****************************-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+
 </head>
 <body>
-    <main>
-        <div class="container d-flex ">
-            <div class="row ">
-                <div class="col-lg-4 col1  d-table-cell">
-                    <h2>login</h2>
+
+<main class="d-flex align-items-center">
+
+    <div class="container d-flex justify-content-center">
+
+        <div class="row shadowcont">
+            <div class="col-lg-4 col-md-4 col-sm-4 col1">
+
+
+                <form class="forms form-group" id="form1">
+
+                    <h1>
+                        <i class="material-icons md-48 form-group">
+                            lock
+                        </i></h1>
+
+                    <h2 class="block loginh2">LOGIN</h2>
+
+
+                    <span class="input input form-group">
+					    <input class="input__field input__field" type="text" id="username"/>
+					    <label class="input__label input__label input__label-color-1" for="username">
+						    <span class="input__label-content input__label-content">Username</span>
+					    </label>
+				    </span>
+                    <span class="input input form-group">
+					    <input class="input__field input__field" type="password" id="password"/>
+					    <label class="input__label input__label input__label-color-2" for="password">
+						    <span class="input__label-content input__label-content">Password</span>
+					    </label>
+				    </span>
+
+
+                    <!--<div class="username">
+                        <input type="text" name="username" placeholder="Email" class="form-group">
+                    </div>-->
+                    <!--<div class="password">
+                        <input type="password" name="password" placeholder="Password" class="form-group">
+                    </div>-->
+
+                </form>
+
+                <div class="loginbut form-group">
+                    <a href="#1" class="atb-round atb-animate-a atb-success form-group">Login</a>
+                    <!--<button type="submit" form="form1" value="login" class="login form-group">LOGIN</button>-->
                 </div>
-                <div class="col-lg-8 col2">
-                    <h2>This is just a random heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col2 d-flex">
+                <h2>Random heading</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. </p>
+                <div class="morebutton">
+                    <button class="morebutt"><a href="#">Learn More</a></button>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+
+
+</main>
+<script src="js/classie.js"></script>
+<script>
+    (function () {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+            (function () {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function () {
+                    return this.replace(rtrim, '');
+                };
+            })();
+        }
+
+        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+            // in case the input is already filled..
+            if (inputEl.value.trim() !== '') {
+                classie.add(inputEl.parentNode, 'input--filled');
+            }
+
+            // events:
+            inputEl.addEventListener('focus', onInputFocus);
+            inputEl.addEventListener('blur', onInputBlur);
+        });
+
+        function onInputFocus(ev) {
+            classie.add(ev.target.parentNode, 'input--filled');
+        }
+
+        function onInputBlur(ev) {
+            if (ev.target.value.trim() === '') {
+                classie.remove(ev.target.parentNode, 'input--filled');
+            }
+        }
+    })();
+</script>
+
 </body>
 </html>
